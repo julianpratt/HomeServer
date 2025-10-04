@@ -97,7 +97,7 @@ services:
       - name: "Immich"
         subtitle: "Photo Gallery"
         logo: "assets/tools/immich.png"
-        url: "http://naspi:4533"
+        url: "http://naspi:2283"
         target: "_blank"
 
   - name: Torrent
