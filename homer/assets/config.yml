@@ -93,13 +93,12 @@ services:
         logo: "assets/tools/navidrome.png"
         url: "http://naspi:4533"
         target: "_blank"
-     - name: "Immich"
+
+      - name: "Immich"
         subtitle: "Photo Gallery"
         logo: "assets/tools/immich.png"
         url: "http://naspi:4533"
         target: "_blank"
-
-
 
   - name: Torrent
     icon: ""
