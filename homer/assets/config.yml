@@ -4,7 +4,7 @@
 # Config: https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md
 # https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md
 title: "Raspberry Pi Home Server"
-subtitle: "App dashboard"
+subtitle: "App Dashboard"
 logo: "assets/tools/raspberry-pi.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
