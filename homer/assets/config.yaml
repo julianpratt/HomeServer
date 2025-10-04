@@ -88,11 +88,11 @@ services:
   - name: Media Streaming
     icon: "/assets/icons/play-button.png"
     items:
-      - name: "Jellyfin"
-        type: "Emby"
-        logo: "assets/tools/jellyfin.png"
-        subtitle: "Multimedia streaming"
-        url: "/jellyfin/"
+      - name: "Navidrome"
+        type: "Navidrome"
+        logo: "assets/tools/navidrome.png"
+        subtitle: "Music streaming"
+        url: "/:4533"
         method: "get"
 
   - name: Torrent

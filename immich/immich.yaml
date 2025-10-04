@@ -22,7 +22,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /storage/Pictures/import:/import:ro
     env_file:
-      - immich/immich.env
+      - .env
     ports:
       - '2283:2283'
     depends_on:
@@ -43,7 +43,7 @@ services:
     volumes:
       - model-cache:/cache
     env_file:
-      - immich/immich.env
+      - .env
     restart: always
     healthcheck:
       disable: false
