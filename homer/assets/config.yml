@@ -89,11 +89,11 @@ services:
     icon: "/assets/icons/play-button.png"
     items:
       - name: "Navidrome"
-        type: "Navidrome"
-        logo: "assets/tools/navidrome.png"
         subtitle: "Music streaming"
+        tag: "app"
+        logo: "assets/tools/navidrome.png"
         url: "http://naspi:4533"
-        method: "get"
+        target: "_blank"
 
   - name: Torrent
     icon: ""
