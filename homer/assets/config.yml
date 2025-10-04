@@ -9,7 +9,7 @@ logo: "assets/tools/raspberry-pi.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
-footer: false
+footer: true
 
 # Optional theme customization
 theme: default
@@ -42,38 +42,38 @@ colors:
 links:
   - name: "Project"
     icon: "fab fa-github"
-    url: "https://github.com/veerendra2/raspberrypi-homeserver"
+    url: "https://github.com/julianpratt/homeserver"
     target: "_blank"
 
-  - name: "Documentation"
-    icon: "fab fa-book"
-    url: "https://dust6765.gitbook.io/raspberrypi-home-server/"
-    target: "_blank"
+#  - name: "Documentation"
+#    icon: "fab fa-book"
+#    url: "https://dust6765.gitbook.io/raspberrypi-home-server/"
+#    target: "_blank"
 
 services:
-  - name: "Monitoring"
-    icon: ""
-    items:
-      - name: "Grafana"
-        type: Ping
-        logo: "assets/tools/grafana.png"
-        subtitle: "Visualization web application"
-        url: "/grafana/"
-        method: "get"
+#  - name: "Monitoring"
+#    icon: ""
+#    items:
+#      - name: "Grafana"
+#        type: Ping
+#        logo: "assets/tools/grafana.png"
+#        subtitle: "Visualization web application"
+#        url: "/grafana/"
+#        method: "get"
 
-      - name: "Prometheus"
-        type: Prometheus
-        logo: "assets/tools/prometheus.png"
-        subtitle: "Systems monitoring and alerting tool"
-        url: "/prometheus/"
-        method: "get"
+#      - name: "Prometheus"
+#        type: Prometheus
+#        logo: "assets/tools/prometheus.png"
+#        subtitle: "Systems monitoring and alerting tool"
+#        url: "/prometheus/"
+#        method: "get"
 
-      - name: "Traefik"
-        type: Ping
-        logo: "assets/tools/traefik.png"
-        subtitle: "Traefik Dahsboard"
-        url: "/dashboard/#/"
-        method: "get"
+#      - name: "Traefik"
+#        type: Ping
+#        logo: "assets/tools/traefik.png"
+#        subtitle: "Traefik Dahsboard"
+#        url: "/dashboard/#/"
+#        method: "get"
 
   # - name: DNS
   #   icon: ""
@@ -100,15 +100,15 @@ services:
         url: "http://naspi:2283"
         target: "_blank"
 
-  - name: Torrent
-    icon: ""
-    items:
-      - name: "qBittorent"
-        type: "qBittorrent"
-        logo: "assets/tools/qbittorrent.png"
-        subtitle: "BitTorrent client"
-        url: "/qbittorrent/"
-        method: "get"
+#  - name: Torrent
+#    icon: ""
+#    items:
+#      - name: "qBittorent"
+#        type: "qBittorrent"
+#        logo: "assets/tools/qbittorrent.png"
+#        subtitle: "BitTorrent client"
+#        url: "/qbittorrent/"
+#        method: "get"
 
       # - name: "Radarr"
       #   type: "Ping"
@@ -131,9 +131,9 @@ services:
       #   url: "/jackett/"
       #   method: "get"
 
-  - name: Management Tools
-    icon: ""
-    items:
+ # - name: Management Tools
+ #   icon: ""
+ #   items:
       # - name: "Portainer"
       #   type: Ping
       #   logo: "assets/tools/portainer.png"
@@ -141,22 +141,22 @@ services:
       #   url: "/portainer/"
       #   method: "get"
 
-      - name: "Filebrowser"
-        type: "Ping"
-        logo: "assets/tools/filebrowser.png"
-        subtitle: "File management UI"
-        url: "/filebrowser/"
-        method: "get"
+  #    - name: "Filebrowser"
+  #      type: "Ping"
+  #      logo: "assets/tools/filebrowser.png"
+  #      subtitle: "File management UI"
+  #      url: "/filebrowser/"
+  #      method: "get"
 
-  - name: Cloud
-    icon: ""
-    items:
-      - name: "Nextcloud"
-        type: "Ping"
-        logo: "assets/tools/nextcloud.png"
-        subtitle: "Self-hosted cloud"
-        url: "/nextcloud/"
-        method: "get"
+  #- name: Cloud
+  #  icon: ""
+  #  items:
+  #    - name: "Nextcloud"
+  #      type: "Ping"
+  #      logo: "assets/tools/nextcloud.png"
+  #      subtitle: "Self-hosted cloud"
+  #      url: "/nextcloud/"
+  #      method: "get"
 
   # - name: Password Manager
   #   icon: ""
