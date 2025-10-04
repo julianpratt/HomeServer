@@ -85,15 +85,21 @@ services:
   #       url: "/admin/"
   #       method: "get"
 
-  - name: Media Streaming
+  - name: Media Libraries
     icon: "/assets/icons/play-button.png"
     items:
       - name: "Navidrome"
-        subtitle: "Music streaming"
-        tag: "app"
+        subtitle: "Music Streaming"
         logo: "assets/tools/navidrome.png"
         url: "http://naspi:4533"
         target: "_blank"
+     - name: "Immich"
+        subtitle: "Photo Gallery"
+        logo: "assets/tools/immich.png"
+        url: "http://naspi:4533"
+        target: "_blank"
+
+
 
   - name: Torrent
     icon: ""
