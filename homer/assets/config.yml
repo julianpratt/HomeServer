@@ -92,7 +92,7 @@ services:
         type: "Navidrome"
         logo: "assets/tools/navidrome.png"
         subtitle: "Music streaming"
-        url: "/:4533"
+        url: ":4533"
         method: "get"
 
   - name: Torrent
