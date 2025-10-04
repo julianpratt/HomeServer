@@ -1,0 +1,181 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+# Config: https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md
+# https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md
+title: "Raspberry Pi Home Server"
+subtitle: "App dashboard"
+logo: "assets/tools/raspberry-pi.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link-hover: "#ffdd57"
+
+links:
+  - name: "Project"
+    icon: "fab fa-github"
+    url: "https://github.com/veerendra2/raspberrypi-homeserver"
+    target: "_blank"
+
+  - name: "Documentation"
+    icon: "fab fa-book"
+    url: "https://dust6765.gitbook.io/raspberrypi-home-server/"
+    target: "_blank"
+
+services:
+  - name: "Monitoring"
+    icon: ""
+    items:
+      - name: "Grafana"
+        type: Ping
+        logo: "assets/tools/grafana.png"
+        subtitle: "Visualization web application"
+        url: "/grafana/"
+        method: "get"
+
+      - name: "Prometheus"
+        type: Prometheus
+        logo: "assets/tools/prometheus.png"
+        subtitle: "Systems monitoring and alerting tool"
+        url: "/prometheus/"
+        method: "get"
+
+      - name: "Traefik"
+        type: Ping
+        logo: "assets/tools/traefik.png"
+        subtitle: "Traefik Dahsboard"
+        url: "/dashboard/#/"
+        method: "get"
+
+  # - name: DNS
+  #   icon: ""
+  #   items:
+  #     - name: "Pi-hole"
+  #       type: "Ping"
+  #       logo: "assets/tools/pi-hole.png"
+  #       subtitle: "Network-wide ad blocking"
+  #       url: "/admin/"
+  #       method: "get"
+
+  - name: Media Streaming
+    icon: "/assets/icons/play-button.png"
+    items:
+      - name: "Jellyfin"
+        type: "Emby"
+        logo: "assets/tools/jellyfin.png"
+        subtitle: "Multimedia streaming"
+        url: "/jellyfin/"
+        method: "get"
+
+  - name: Torrent
+    icon: ""
+    items:
+      - name: "qBittorent"
+        type: "qBittorrent"
+        logo: "assets/tools/qbittorrent.png"
+        subtitle: "BitTorrent client"
+        url: "/qbittorrent/"
+        method: "get"
+
+      # - name: "Radarr"
+      #   type: "Ping"
+      #   logo: "assets/tools/radarr.svg"
+      #   subtitle: "Movie collection manager for Usenet and BitTorrent users"
+      #   url: "/radarr/"
+      #   method: "get"
+
+      # - name: "Sonarr"
+      #   type: "Ping"
+      #   logo: "assets/tools/sonarr.png"
+      #   subtitle: "PVR for Usenet and BitTorrent users"
+      #   url: "/sonarr/"
+      #   method: "get"
+
+      # - name: "jackett"
+      #   type: "Ping"
+      #   logo: "assets/tools/jackett.png"
+      #   subtitle: "Proxy for Radarr and Sonarr"
+      #   url: "/jackett/"
+      #   method: "get"
+
+  - name: Management Tools
+    icon: ""
+    items:
+      # - name: "Portainer"
+      #   type: Ping
+      #   logo: "assets/tools/portainer.png"
+      #   subtitle: "Container management UI"
+      #   url: "/portainer/"
+      #   method: "get"
+
+      - name: "Filebrowser"
+        type: "Ping"
+        logo: "assets/tools/filebrowser.png"
+        subtitle: "File management UI"
+        url: "/filebrowser/"
+        method: "get"
+
+  - name: Cloud
+    icon: ""
+    items:
+      - name: "Nextcloud"
+        type: "Ping"
+        logo: "assets/tools/nextcloud.png"
+        subtitle: "Self-hosted cloud"
+        url: "/nextcloud/"
+        method: "get"
+
+  # - name: Password Manager
+  #   icon: ""
+  #   items:
+  #     - name: "Vaultwarden"
+  #       type: "Ping"
+  #       logo: "assets/tools/vaultwarden.png"
+  #       subtitle: "Rust implementation of Bitwarden API"
+  #       url: "/vaultwarden/"
+  #       method: "get"
+
+  # - name: Utilities
+  #   icon: ""
+  #   items:
+  #     - name: "SearXNG"
+  #       type: "Ping"
+  #       logo: "assets/tools/searxng.svg"
+  #       subtitle: "Metasearch engine"
+  #       url: "/searxng/"
+  #       method: "get"
+
+  #     - name: "IT-Tools"
+  #       type: "Ping"
+  #       logo: "assets/tools/it-tools.png"
+  #       subtitle: "Useful tools for developer"
+  #       url: "/it-tools/"
+  #       method: "get"

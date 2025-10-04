@@ -1,3 +1,4 @@
 include:
-  - navidrome.yaml
-  - immich.yaml
+  - navidrome/navidrome.yaml
+  - immich/immich.yaml
+  - homer/docker-stack.yaml
