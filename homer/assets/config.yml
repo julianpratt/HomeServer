@@ -9,7 +9,7 @@ logo: "assets/tools/raspberry-pi.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
-footer: true
+footer: false
 
 # Optional theme customization
 theme: default
@@ -148,15 +148,24 @@ services:
   #      url: "/filebrowser/"
   #      method: "get"
 
-  #- name: Cloud
-  #  icon: ""
-  #  items:
-  #    - name: "Nextcloud"
-  #      type: "Ping"
-  #      logo: "assets/tools/nextcloud.png"
-  #      subtitle: "Self-hosted cloud"
-  #      url: "/nextcloud/"
-  #      method: "get"
+  - name: Cloud
+    icon: ""
+    items:
+      - name: "Drive"
+        logo: "assets/tools/google-drive.png"
+        subtitle: "Google Drive"
+        url: "https://drive.google.com"
+        target: "_blank"
+
+  - name: Synology NAS
+    icon: ""
+    items:
+      - name: "NAS3 Admin"
+        logo: "assets/tools/synology.png"
+        url: "http://nas3:5000"
+        target: "_blank"
+
+
 
   # - name: Password Manager
   #   icon: ""
