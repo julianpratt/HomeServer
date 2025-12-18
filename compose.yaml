@@ -2,3 +2,4 @@ include:
   - navidrome/navidrome.yaml
   - immich/immich.yaml
   - homer/docker-stack.yaml
+  - plex/plex.yaml  
