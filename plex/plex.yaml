@@ -15,9 +15,9 @@ services:
       - /storage/Videos/Gardens:/Gardens
       - /storage/Videos/History:/History
       - /storage/Videos/Misc:/Misc
-      - /storage/Videos/Model Railways:/Model Railways                        
+      - /storage/Videos/Model_Railways:/Model_Railways                        
       - /storage/Videos/Movies:/Movies
       - /storage/Videos/Music:/Music
       - /storage/Videos/Trains:/Trains            
-      - /storage/Videos/TV Shows:/TV
+      - /storage/Videos/TV_Shows:/TV
     restart: unless-stopped
