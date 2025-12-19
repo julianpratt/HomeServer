@@ -1,0 +1,48 @@
+---
+- name: Install fan script
+  when: install_fan_script
+  block:
+    - name: Check fan-py daemon is loaded
+      ansible.builtin.systemd:
+        name: fan-py
+      register: output
+
+    - name: Install pigpio and Pi fan controller
+      ansible.builtin.include_tasks: pigpio.yml
+      when: output.status.LoadState != 'loaded'
+
+- name: Power optimization
+  when: disable_bluetooth
+  block:
+    - name: Stop and disable hciuart and bluetooth deamon
+      ansible.builtin.systemd:
+        name: "{{ item }}"
+        state: stopped
+        enabled: false
+      with_items:
+        - bluetooth
+        - hciuart
+    - name: Disable HDMI Output
+      ansible.builtin.command: /usr/bin/tvservice -o
+
+- name: Configure disk mounts in /etc/fstab
+  ansible.posix.mount:
+    path: "{{ item.value }}"
+    src: "{{ item.key }}"
+    fstype: ext4
+    opts: rw,async
+    state: mounted
+  loop: "{{ lookup('dict', disk_mount_dirs) }}"
+
+- name: Change mount directories ownership
+  ansible.builtin.file:
+    path: "{{ item.value }}"
+    owner: "{{ run_user }}"
+    group: "{{ run_user }}"
+    mode: "0744"
+  loop: "{{ lookup('dict', disk_mount_dirs) }}"
+
+- name: Reboot Pi after upgrade
+  ansible.builtin.reboot:
+    post_reboot_delay: 10
+  when: reboot_after_pi_preparation and ansible_connection != 'local'

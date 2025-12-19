@@ -1,0 +1,6 @@
+services/traefik/config/ssl/*[.crt, .key]
+services/torrent/wireguard/wg0.conf
+services/torrent/.vpn_ip
+services/traefik/config/acme.json
+services/traefik/secrets/duckdns.txt
+services/monitoring/prometheus/customhosts.yml

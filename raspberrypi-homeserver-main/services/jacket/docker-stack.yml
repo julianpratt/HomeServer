@@ -1,0 +1,33 @@
+---
+version: '3.8'
+
+networks:
+  network_private:
+    external: true
+
+services:
+  jackett:
+    image: linuxserver/jackett:arm64v8-latest
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 30s
+        max_attempts: 3
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=network_private
+        - traefik.http.routers.jackett.tls=true
+        - traefik.http.routers.jackett.rule=Host(`veeru.duckdns.org`) && PathPrefix(`/jackett`)
+        - traefik.http.services.jackett.loadbalancer.server.port=9117
+    hostname: jackett
+    env_file:
+      - .env_jackett
+    networks:
+      - network_private
+    volumes:
+      - ./config/ServerConfig.json:/config/Jackett/ServerConfig.json
+      - /media/disk2/volumes/jackett:/config
+      - /media/disk2/downloads/torrents:/opt/torrents

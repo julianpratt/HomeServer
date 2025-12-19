@@ -1,0 +1,37 @@
+---
+# https://dust6765.gitbook.io/raspberrypi-home-server/services/file-browser
+version: '3.8'
+
+networks:
+  network_public:
+    external: true
+
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 30s
+        max_attempts: 3
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=network_public
+        - traefik.http.routers.filebrowser.tls=true
+        - traefik.http.routers.filebrowser.rule=Host(`veeru.duckdns.org`) && PathPrefix(`/filebrowser`)
+        - traefik.http.routers.filebrowser.middlewares=filebrowser-stripprefix
+        - traefik.http.middlewares.filebrowser-stripprefix.stripprefix.prefixes=/filebrowser
+        - traefik.http.services.filebrowser.loadbalancer.server.port=80
+    hostname: filebrowser
+    env_file:
+      - .env_filebrowser
+    volumes:
+      - ./config/filebrowser.json:/.filebrowser.json
+      - /media/disk2/volumes/filebrowser:/database
+      - /media/disk2:/srv/disk2
+      - /media/disk1:/srv/disk1
+    networks:
+      network_public:

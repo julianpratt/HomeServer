@@ -8,6 +8,7 @@ services:
       - PGID=1000
       - TZ=GB
       - VERSION=docker
+      - PLEX_CLAIM=claim-GZ9TmbnySUmbwxezq2KL
     volumes:
       - /storage/Videos:/config
       - /storage/Videos/Christian:/Christian
