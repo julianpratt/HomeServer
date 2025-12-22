@@ -1,0 +1,7 @@
+# docker-compose.yml
+services:
+  web:
+    image: dannyben/madness
+    volumes: ["/storage/Notes:/docs"]
+    ports: ["3000:3000"]
+
