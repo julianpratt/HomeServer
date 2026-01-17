@@ -4,3 +4,4 @@ include:
   - homer/docker-stack.yaml
   - plex/plex.yaml  
   - wikijs/wikijs.yaml
+  - madness/madness.yaml
