@@ -156,6 +156,13 @@ services:
         subtitle: "Google Drive"
         url: "https://drive.google.com"
         target: "_blank"
+        
+      - name: "Proton Pass"
+        logo: "assets/tools/proton-pass.png"
+        subtitle: "Password Manager"
+        url: "https://pass.proton.me/"
+        target: "_blank"
+
 
   - name: Synology NAS
     icon: ""
