@@ -171,14 +171,19 @@ services:
         target: "_blank"
 
 
-  - name: Synology NAS
+  - name: Data Sharing
     icon: ""
     items:
       - name: "NAS3 Admin"
         logo: "assets/tools/synology.png"
         url: "http://nas3:5000"
         target: "_blank"
-
+        
+      - name: "Syncthing"
+        logo: "assets/tools/syncthing.png"
+        subtitle: "Data Sync"
+        url: "https://localhost:8384"
+        target: "_blank"
 
 
   # - name: Password Manager
